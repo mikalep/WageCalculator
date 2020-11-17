@@ -20,7 +20,7 @@ require_once 'functions.php';
 
         <div class="form-group">
           <label for="selection">Choose between calculating hourly or monthly wage:</label>
-          <select class="form-control" id="selection" name="option" onchange="chooseTitle()">
+          <select class="form-control" id="selection" name="option" onchange="onOptionChange()">
             <option value="hourly">Hourly Wage</option>
             <option value="monthly" selected>Monthly Wage</option>
           </select>
@@ -28,7 +28,7 @@ require_once 'functions.php';
 
         <div class="form-group">
             <label for="amount_input" id="amount_box"></label>
-            <input type="text" name="amount" class="form-control" id="amount_input" placeholder="Enter a numeric amount, eg. 100">
+            <input type="text" name="amount" class="form-control" id="amount_input" placeholder="onOptionChange()">
         </div>
 
         <div class="form-group">
@@ -42,5 +42,5 @@ require_once 'functions.php';
 
     </div>
   </body>
-  <script>chooseTitle()</script>
+  <script>onOptionChange()</script>
 </html>
