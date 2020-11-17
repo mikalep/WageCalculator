@@ -7,7 +7,7 @@ function chooseOption()
     $output = '';
 
     if ($_GET['option'] === 'hourly') {
-        $output = "Enter your salary:";
+        $output = "Enter your monthly wage:";
         return $output;
     } elseif ($_GET['option'] === 'monthly') {
         $output = "Enter your hourly wage:";
@@ -24,7 +24,7 @@ function chooseTitle()
     } elseif ($_GET['option'] === 'hourly') {
         $title = "Your hourly wage is:";
     } elseif ($_GET['option'] === 'monthly') {
-        $title = "Your monthly salary is:";
+        $title = "Your monthly wage is:";
     }
     return $title;
 }

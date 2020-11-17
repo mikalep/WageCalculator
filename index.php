@@ -22,7 +22,7 @@ require_once 'functions.php';
           <label for="selection">Choose between calculating hourly or monthly wage:</label>
           <select class="form-control" id="selection" name="option" onchange="chooseTitle()">
             <option value="hourly">Hourly Wage</option>
-            <option value="monthly">Monthly Wage</option>
+            <option value="monthly" selected>Monthly Wage</option>
           </select>
         </div>
 
@@ -36,7 +36,7 @@ require_once 'functions.php';
             <input type="text" name="result" class="form-control" value="<?php echo calculateResult(); ?>" disabled>
         </div>
 
-        <button type="submit" method="POST" class="btn btn-primary">Calculate</button>
+        <button type="submit" method="POST" class="btn btn-success">Calculate</button>
 
       </form>
 
