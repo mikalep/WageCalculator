@@ -19,7 +19,9 @@ function chooseTitle()
 {
     $title = '';
 
-    if ($_GET['option'] === 'hourly') {
+    if (!isset($_GET['option'])) {
+        return "";
+    } elseif ($_GET['option'] === 'hourly') {
         $title = "Your hourly wage is:";
     } elseif ($_GET['option'] === 'monthly') {
         $title = "Your monthly salary is:";
@@ -29,7 +31,9 @@ function chooseTitle()
 
 function calculateResult()
 {
-    if ($_GET['option'] === 'hourly') {
+    if (!isset($_GET['option'])) {
+        $result = 0;
+    } elseif ($_GET['option'] === 'hourly') {
         $result = new WageCalculator($_GET['amount']);
         return $result->getHourlyWage();
     } elseif ($_GET['option'] === 'monthly') {
